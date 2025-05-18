@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>City Limits Gym | Workout Routine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/creativity.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">City Limits Gym</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="creativity.html" class="active">Workout Routine</a></li>
+          <li><a href="membership.html">Membership</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h2>Explore Our Gallery</h2>
+      <p>Get a feel for our space and community through these snapshots.</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- Slideshow -->
+    <section class="slideshow-section">
+      <div class="slideshow">
+        <div class="slide active">
+          <img src="photo-1542766788-a2f588f447ee.jpg" alt="Gym interior view">
+          <div class="caption">
+            <h3>Open Floor Space</h3>
+            <p>Room to stretch.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="cardio.jpg" alt="Cardio machines">
+          <div class="caption">
+            <h3>Cardio Zone</h3>
+            <p>Treadmills, bikes, ellipticals and more.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="free weights.jpg" alt="Free weights">
+          <div class="caption">
+            <h3>Strength Corner</h3>
+            <p>Dumbbells, racks, benches and heavy lifts.</p>
+          </div>
+        </div>
+        <button id="prev" aria-label="Previous slide">‹</button>
+        <button id="next" aria-label="Next slide">›</button>
+      </div>
+    </section>
+
+    <!-- Google Map -->
+    <section id="map" class="map-section"></section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a href="https://www.youtube.com/watch?v=xMHJGd3wwZk">Contact Us</a></div>
+      <div><a href="https://www.youtube.com/watch?v=xMHJGd3wwZk">Terms &amp; Conditions</a></div>
+      <div><a href="https://www.youtube.com/watch?v=xMHJGd3wwZk">Reviews</a></div>
+      <div><a href="https://www.youtube.com/watch?v=xMHJGd3wwZk">Join Us!</a></div>
+    </div>
+  </footer>
+
+  <!-- Google Maps API -->
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=YAIzaSyAjy9--sOcdgm3hF9bj2wcVR6LckbAzXgU&callback=initMap"
+  async
+  defer
+></script>
+  <script src="js/creativity.js" defer></script>
+</body>
+</html>

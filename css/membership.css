@@ -1,0 +1,236 @@
+/* css/membership.css */
+
+:root {
+    --primary: #6EEFEF;
+    --dark: #212121;
+    --radius: 8px;
+    --transition: 0.3s ease;
+  }
+  
+  /* RESET & BASE */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* FULL-PAGE BACKGROUND */
+  body {
+    background: url('../card-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--dark);
+  }
+  .container,
+  main,
+  section,
+  footer {
+    background: transparent;
+  }
+  
+  /* HEADER */
+  .site-header {
+    background: var(--primary);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-weight: 700;
+    color: var(--dark);
+  }
+  .nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav a {
+    font-weight: 500;
+    color: var(--dark);
+    padding-bottom: 2px;
+    transition: border-bottom var(--transition);
+  }
+  .nav a:hover,
+  .nav a.active {
+    border-bottom: 2px solid var(--dark);
+  }
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* HERO */
+  .hero {
+    height: 60vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 2rem;
+    border-radius: var(--radius);
+    text-align: center;
+  }
+  .hero-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero-overlay p {
+    font-size: 1.1rem;
+  }
+  
+  /* FORM SECTION */
+  .form-section {
+    max-width: 500px;
+    margin: 3rem auto 6rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* New section heading */
+  .form-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+  }
+  
+  /* Form fields */
+  .form-group {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"],
+  .form-group input[type="tel"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+  }
+  .form-group small.error {
+    margin-top: 0.25rem;
+    color: #b51f1f;
+    visibility: hidden;
+    font-size: 0.85rem;
+  }
+  
+  /* inline errors */
+  input:invalid + small.error,
+  fieldset .error.visible {
+    visibility: visible;
+  }
+  
+  /* FIELDSETS */
+  fieldset {
+    border: none;
+    margin-bottom: 1.25rem;
+  }
+  fieldset legend {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  fieldset label {
+    margin-right: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  fieldset small.error {
+    display: block;
+    margin-top: 0.25rem;
+    color: #b51f1f;
+    visibility: hidden;
+  }
+  
+  /* BUTTON */
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: filter var(--transition);
+  }
+  .btn:hover {
+    filter: brightness(0.9);
+  }
+  
+  /* FOOTER */
+  .site-footer {
+    background: var(--primary);
+    padding: 2rem 0 1rem;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .footer-grid a {
+    font-weight: 500;
+    transition: color var(--transition);
+  }
+  .footer-grid a:hover {
+    color: #000;
+  }
+  .attribution {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #444;
+  }
+  
+  /* RESPONSIVE NAV */
+  @media (max-width: 768px) {
+    .nav ul {
+      display: none;
+      flex-direction: column;
+      background: var(--primary);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 200px;
+      padding: 1rem;
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+    .nav ul.open {
+      display: flex;
+    }
+    .nav-toggle {
+      display: block;
+    }
+  }
+  
+  /* MOBILE FORM PADDING */
+  @media (max-width: 480px) {
+    .form-section {
+      margin: 2rem 1rem 4rem;
+    }
+  }  
